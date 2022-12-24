@@ -6,6 +6,7 @@ import Login from "./Login"
 import Settings from './Settings'
 import { useAuth } from './context/AuthContext'
 import ForgotPassword from './ForgotPassword'
+import { PageTransition } from '@steveeeie/react-page-transition'
 
 export default function SimpleApp() {
   const currentUser = useAuth()
@@ -20,13 +21,13 @@ export default function SimpleApp() {
   }
   return (
     <Routes>
-      <Route path="/">
-        <Route index element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/settings' element={<Settings />} />
-        <Route path='/forgot-password' element={<ForgotPassword />} />
-      </Route>
+        <Route path="/">
+          <Route index element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+          <Route path='/signup' element={<SignUp />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/settings' element={<Settings />} />
+          <Route path='/forgot-password' element={<ForgotPassword />} />
+        </Route>
     </Routes>
   )
 }

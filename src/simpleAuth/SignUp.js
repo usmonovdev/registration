@@ -14,7 +14,7 @@ export default function SignUp() {
     async function handleSubmit(e) {
         e.preventDefault()
 
-        if(passwordRef.current.value !== passwordConfirmRef.current.value) {
+        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
             return setError("Passwords do not match")
         }
 
@@ -35,26 +35,23 @@ export default function SignUp() {
             <div className='card'>
                 <div className="card-body">
                     <h2>Sign Up</h2>
-                    {error && <p>{error}</p>}
+                    {error && <p className='error'>{error}</p>}
                     <form onSubmit={handleSubmit}>
                         <div>
-                            <label htmlFor="email">Email</label>
-                            <input type="email" id='email' placeholder='Email' required ref={emailRef} />
+                            <input type="email" id='email' placeholder='Email' style={{marginBottom: "14px"}} required ref={emailRef} />
                         </div>
                         <div>
-                            <label htmlFor="password">Password</label>
-                            <input type="password" id='password' placeholder='Password' required ref={passwordRef} />
+                            <input type="password" id='password' placeholder='Password' style={{marginBottom: "14px"}} required ref={passwordRef} />
                         </div>
                         <div>
-                            <label htmlFor="password-confirm">Password Confirm</label>
-                            <input type="password" id='password-confirm' placeholder='Password' required ref={passwordConfirmRef} />
+                            <input type="password" id='password-confirm' placeholder='Password' style={{marginBottom: "14px"}} required ref={passwordConfirmRef} />
                         </div>
-                        <button disabled={loading} type='submit'>Sign Up</button>
+                        <button className='btn' disabled={loading} type='submit'>Sign Up</button>
                     </form>
+                    <div>
+                        <p className='signup'>Already have an account? <Link to="/login">Log In</Link></p>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <p>Already have an account? <Link to="/login">Log In</Link></p>
             </div>
         </>
     )

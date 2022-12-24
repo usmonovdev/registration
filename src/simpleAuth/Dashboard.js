@@ -21,11 +21,11 @@ export default function Dashboard() {
         <div className="card-body">
           <h2>Profile</h2>
           {error && <p>{error}</p>}
-          <p><strong>Email: </strong>{currentUser.email}</p>
+          <p className='signup' style={{marginTop: "0px"}}><strong>Email: </strong>{currentUser.email}</p>
           <Link to="/settings">Update Profile</Link>
+          <button className='out' onClick={handleLogout}>Log Out</button>
         </div>
       </div>
-      <button onClick={handleLogout}>Log Out</button>
     </>
   )
 }

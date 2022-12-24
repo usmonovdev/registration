@@ -30,20 +30,19 @@ export default function ForgotPassword() {
             <div className='card'>
                 <div className="card-body">
                     <h2>Password Reset</h2>
-                    {error && <p>{error}</p>}
-                    {message && <p>{message}</p>}
+                    {error && <p className='error'>{error}</p>}
+                    {message && <p className='message'>{message}</p>}
                     <form onSubmit={handleSubmit}>
                         <div>
-                            <label htmlFor="email">Email</label>
-                            <input type="email" id='email' placeholder='Email' required ref={emailRef} />
+                            <input type="email" id='email' placeholder='Email' style={{ marginBottom: "14px" }} required ref={emailRef} />
                         </div>
-                        <Link to="/login">Login</Link>
-                        <button disabled={loading} type='submit'>Reset Password</button>
+                        <Link className='forgot-password' to="/login">Login</Link>
+                        <button className='btn' style={{ width: "70%" }} disabled={loading} type='submit'>Reset Password</button>
                     </form>
+                    <div>
+                        <p className='signup'>Need an account? <Link to="/signup">Sign Up</Link></p>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <p>Need an account? <Link to="/signup">Sign Up</Link></p>
             </div>
         </>
     )
