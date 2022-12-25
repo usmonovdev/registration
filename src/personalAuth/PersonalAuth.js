@@ -23,8 +23,8 @@ export default function PersonalAuth() {
       <Routes location={location} key={location.pathname}>
         <Route path='/'>
           <Route index element={<ProtectedRoute><Home /></ProtectedRoute>} />
-          <Route path='/login' element={<LogIn />} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='/login' element={<LogIn />} />
           <Route path='/settings' element={<Settings />} />
         </Route>
       </Routes>
