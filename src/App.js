@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { AuthProvider } from './simpleAuth/context/AuthContext';
-import SimpleApp from './simpleAuth/SimpleApp';
+import { AuthContextProvider } from './personalAuth/Context';
+import PersonalAuth from './personalAuth/PersonalAuth';
 import "./simpleAuth/style.css"
 
 function App() {
 
     return (
-        <BrowserRouter >
-            <AuthProvider>
-                <SimpleApp />
-            </AuthProvider>
-        </BrowserRouter>
+        <AuthContextProvider>
+            <BrowserRouter >
+                <PersonalAuth />
+            </BrowserRouter>
+        </AuthContextProvider>
     );
 }
 

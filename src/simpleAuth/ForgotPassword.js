@@ -36,7 +36,7 @@ export default function ForgotPassword() {
                         <div>
                             <input type="email" id='email' placeholder='Email' style={{ marginBottom: "14px" }} required ref={emailRef} />
                         </div>
-                        <Link className='forgot-password' to="/login">Login</Link>
+                        <Link className='forgot-password' style={{marginTop: "0"}} to="/login">Login</Link>
                         <button className='btn' style={{ width: "70%" }} disabled={loading} type='submit'>Reset Password</button>
                     </form>
                     <div>
