@@ -5,7 +5,6 @@ import { AuthContext } from './Context'
 import Home from './Home'
 import LogIn from './LogIn'
 import SignUp from './SignUp'
-import Settings from './Settings'
 import { AnimatePresence } from 'framer-motion'
 import "./style.css"
 
@@ -25,7 +24,6 @@ export default function PersonalAuth() {
           <Route index element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/login' element={<LogIn />} />
-          <Route path='/settings' element={<Settings />} />
         </Route>
       </Routes>
     </AnimatePresence>
