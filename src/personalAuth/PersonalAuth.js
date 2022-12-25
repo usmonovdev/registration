@@ -7,6 +7,7 @@ import LogIn from './LogIn'
 import SignUp from './SignUp'
 import Settings from './Settings'
 import { AnimatePresence } from 'framer-motion'
+import "./style.css"
 
 export default function PersonalAuth() {
   const location = useLocation()
