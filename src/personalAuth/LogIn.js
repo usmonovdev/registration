@@ -37,6 +37,7 @@ export default function LogIn() {
             <div className="card-body">
                 <h2>Log In</h2>
                 <form onSubmit={handleSubmit}>
+                    {error && <p className='error'>{error}</p>}
                     <input type="email" placeholder='Email' required style={{ marginBottom: "14px" }} />
                     <input type="password" placeholder='Password' required style={{ marginBottom: "14px" }} />
                     <button className='btn'>Log In</button>
